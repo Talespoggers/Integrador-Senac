@@ -1,0 +1,29 @@
+.imagemLogo{
+    border: solid 1px black;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    margin-right: 42%;
+    margin-left: 38%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.span{
+    color: blue;
+}
+
+.header{
+    border: solid 1px black;
+}
+
+.produtos{
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button{
+    border: solid 1px red;
+    
+}
