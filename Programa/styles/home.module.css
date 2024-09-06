@@ -1,29 +1,61 @@
-.imagemLogo{
-    border: solid 1px black;
+.main {
+    background-color: rgba(32, 32, 32, 0.842);
+}
+
+.imagemLogo {
+    
     margin-bottom: 3%;
     margin-top: 1%;
     margin-right: 42%;
     margin-left: 38%;
     font-weight: bold;
     font-size: 30px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
-.span{
+.span {
     color: blue;
 }
 
-.header{
+.header {
     border: solid 1px black;
 }
 
-.produtos{
+.produtos {
     border: solid 1px black;
     display: flex;
     justify-content: space-around;
 }
 
-.button{
+.button {
     border: solid 1px red;
-    
+    margin-right: 150px;
+    border-radius: 6px;
+    color: white
 }
+
+.button1 {
+    padding-left: 150px;
+    padding-right: 148px;
+    color: white;
+    background-color: rgba(48, 48, 48, 0.897);
+}
+
+.button1:hover {
+    padding-left: 150px;
+    padding-right: 148px;
+    color: rgb(134, 133, 133);
+    background-color: rgba(59, 59, 59, 0.897);
+}
+
+.input{
+    margin-left: 50%;
+}
+.pesquisar{
+    display: grid;
+    grid-template-columns: 30%  20%;
+    margin-left: 28%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
