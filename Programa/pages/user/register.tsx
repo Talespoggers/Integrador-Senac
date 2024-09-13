@@ -44,6 +44,7 @@ export default function Register() {
 
     return (
         
+        
         <main className={styles.main}>
             <div className={styles.conteiner}>
                 <h3 className={styles.h3}>Registre-se</h3>

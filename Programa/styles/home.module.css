@@ -28,6 +28,7 @@
 }
 
 .button {
+    margin-left: 1%;
     border: solid 1px red;
     margin-right: 150px;
     border-radius: 6px;
@@ -44,11 +45,17 @@
 .button1:hover {
     padding-left: 150px;
     padding-right: 148px;
-    color: rgb(134, 133, 133);
+    color: rgb(133, 133, 134);
     background-color: rgba(59, 59, 59, 0.897);
 }
 
 .input{
+    color: black;
+    margin-right: 4px;
+    padding: 3px;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius:6px;
+    background-color: rgb(255, 255, 255);
     margin-left: 50%;
 }
 .pesquisar{
