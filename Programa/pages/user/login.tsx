@@ -51,9 +51,10 @@ export default function login() {
     }
 
     return (
-        <main>
+        <main className={styles.main}>
+            <h1 className={styles.e}>e</h1>
             <div className={styles.conteiner}>
-                <h1 className={styles.h1}>LOGIN</h1>
+                <h1 className={styles.login}>LOGIN</h1>
                 <form >
                     <input
                         className={styles.input}
@@ -75,10 +76,11 @@ export default function login() {
                     <br />
 
 
-                    <button className={styles.input1} type="submit">Entrar</button>
+                    <button className={styles.entrar} type="submit">Entrar</button>
+                    <br />
                     <br />
 
-                    <Link href={`/user/register`}> Registrar-se</Link>
+                    <Link className={styles.link} href={`/user/register`}> Registrar-se</Link>
 
                 </form>
             </div>

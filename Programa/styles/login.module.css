@@ -1,12 +1,47 @@
+.entrar{
+    padding: 3px;
+    border: solid 1px black;
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:  red;
+}
+
+.entrar:hover{
+    border: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    background-color:  rgb(247, 108, 108);
+    color: white;
+}
+
+.login{
+    color: red;
+    font-size: large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .conteiner{
+    background-color: rgba(0, 0, 0, 0.466);
     border-radius: 6px;
     border: solid 1px black;
     text-align: center;
-    margin-left: 45%;
+    margin-left: 39%;
     margin-right: 45%;
     margin-top: 15%;
     padding: 2%;
-    width: 300px;
+    width: 400px;
+}
+
+.link{
+    color: red
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: rgb(200, 255, 0)
 }
 
 .input{
@@ -29,3 +64,14 @@
     
 
 }
+
+.main{
+    background-image: url("/kimetsu.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.e{
+    color: transparent;
+}
+

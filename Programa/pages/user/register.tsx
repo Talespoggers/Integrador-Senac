@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { getCookie, setCookie } from "cookies-next";
 import styles from "@/styles/register.module.css"
+import Link from "next/link";
 
 export default function Register() {
     const router = useRouter();
@@ -109,6 +110,10 @@ export default function Register() {
                         className={styles.input1}
                         type="submit"
                     >Registrar</button>
+                    <br />
+                    <br />
+
+                    <Link href={`/user/login`}>Voltar</Link>
 
                 </form>
             </div>
