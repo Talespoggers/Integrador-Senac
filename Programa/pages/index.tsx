@@ -11,17 +11,6 @@ import { getCookie } from 'cookies-next';
 
 export default function Home() {
 
-
-   const router = useRouter();
-
-  useEffect(() => {
-    const token = getCookie('authorization');
-
-    if (!token) {
-      router.push('/user/login');
-    }
-  }, [router]);
-
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState(null); 
 
