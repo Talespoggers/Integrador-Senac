@@ -1,21 +1,20 @@
 import Style from "@/styles/home.module.css";
 import Link from "next/link";
 import { useState } from "react";
-
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { Router, useRouter } from 'next/router';
 import { getCookie } from 'cookies-next';
 
 
- 
+
 
 export default function Home() {
-
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
-  const [filter, setFilter] = useState(null); 
+  const [filter, setFilter] = useState(null);
 
 
-  function handleSearch(event:any) {
+  function handleSearch(event: any) {
     setSearchTerm(event.target.value);
   }
 
@@ -25,10 +24,10 @@ export default function Home() {
 
   }
 
-  function applyFilter(filterType:any) {
+  function applyFilter(filterType: any) {
     setFilter(filterType);
     console.log(`Filtro aplicado: ${filterType}`);
-   
+
   }
 
 
@@ -36,6 +35,14 @@ export default function Home() {
     setFilter(null);
     console.log("Filtro limpo");
 
+  }
+
+  function handleExitButton() {
+    router.push(`/user/login`)
+  }
+
+  function handleButtonRegister() {
+    router.push(`/user/register`);
   }
 
   return (
@@ -56,9 +63,18 @@ export default function Home() {
             value={searchTerm}
             onChange={handleSearch}
           />
-          <button className={Style.button} onClick={handleSearchSubmit}>
+
+          <div className={Style.juntos}>
+            
+            <button className={Style.button} onClick={handleSearchSubmit}>
             Pesquisar
           </button>
+            <button onClick={handleExitButton} className={Style.sair}>Sair</button>
+            <button onClick={handleButtonRegister} className={Style.registrar}>Registrar</button>
+          
+
+          
+          </div>
         </div>
 
         {/* Botões de Filtro */}

@@ -113,7 +113,7 @@ export default function Register() {
                     <br />
                     <br />
 
-                    <Link href={`/user/login`}>Voltar</Link>
+                    <Link href={`/`}>Voltar</Link>
 
                 </form>
             </div>

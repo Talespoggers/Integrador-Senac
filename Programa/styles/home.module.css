@@ -28,6 +28,8 @@
 }
 
 .button {
+    padding-left:20px ;
+    padding-right: 20px;
     margin-left: 1%;
     border: solid 1px red;
     margin-right: 150px;
@@ -64,5 +66,31 @@
     margin-left: 28%;
     margin-top: -30px;
     margin-bottom: 20px;
+}
+.sair{
+    background-color: rgb(9, 82, 151);
+    border-radius: 6px;
+    color: white;
+    border: solid 1px rgb(74, 144, 236);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 20%;
+}
+
+.registrar{
+    background-color: rgb(105, 23, 105);
+    border-radius: 6px; 
+    color:white;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid 1px rgb(245, 42, 235);
+    margin-left: 2%;
+}
+
+.juntos{
+    width: 350px;
+    display: flex;
+    height: 40px;
+
 }
 
