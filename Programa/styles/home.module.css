@@ -1,16 +1,14 @@
 .main {
     background-color: rgba(32, 32, 32, 0.842);
+    padding: 20px;
 }
 
 .imagemLogo {
-    
-    margin-bottom: 3%;
-    margin-top: 1%;
-    margin-right: 42%;
-    margin-left: 38%;
+    margin: 1% auto 3%;
+    text-align: center;
     font-weight: bold;
     font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .span {
@@ -18,79 +16,124 @@
 }
 
 .header {
-    border: solid 1px black;
+    border: solid 1px transparent;
+
+    padding: 10px;
 }
 
 .produtos {
-    border: solid 1px black;
+    border: solid 1px transparent;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .button {
-    padding-left:20px ;
-    padding-right: 20px;
-    margin-left: 1%;
+    padding: 10px 20px;
     border: solid 1px red;
-    margin-right: 150px;
     border-radius: 6px;
-    color: white
+    color: white;
+    background-color: rgba(48, 48, 48, 0.897);
+    text-align: center;
 }
 
 .button1 {
-    padding-left: 150px;
-    padding-right: 148px;
+    padding-left: 130px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: white;
     background-color: rgba(48, 48, 48, 0.897);
+    border: none;
+    border-radius: 6px;
 }
 
 .button1:hover {
-    padding-left: 150px;
-    padding-right: 148px;
     color: rgb(133, 133, 134);
     background-color: rgba(59, 59, 59, 0.897);
+    border: solid 1px rgba(255, 255, 255, 0.377);
 }
 
-.input{
+.input {
     color: black;
-    margin-right: 4px;
-    padding: 3px;
-    border-top-left-radius: 6px;
-    border-bottom-right-radius:6px;
+    padding: 5px;
+    border-radius: 6px;
     background-color: rgb(255, 255, 255);
-    margin-left: 50%;
+    width: 100%;
 }
-.pesquisar{
-    display: grid;
-    grid-template-columns: 30%  20%;
-    margin-left: 28%;
-    margin-top: -30px;
-    margin-bottom: 20px;
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 20px;
+    max-width: 800px;
 }
-.sair{
-    background-color: rgb(9, 82, 151);
+
+.sair {
+    background-color: rgb(151, 9, 28);
     border-radius: 6px;
     color: white;
     border: solid 1px rgb(74, 144, 236);
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 20%;
+    padding: 10px 20px;
 }
 
-.registrar{
+.registrar {
     background-color: rgb(105, 23, 105);
-    border-radius: 6px; 
-    color:white;
-    padding-left: 40px;
-    padding-right: 40px;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 20px;
     border: solid 1px rgb(245, 42, 235);
-    margin-left: 2%;
 }
 
-.juntos{
-    width: 350px;
+.juntos {
     display: flex;
-    height: 40px;
-
+    gap: 10px;
+    align-items: center;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.card button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
