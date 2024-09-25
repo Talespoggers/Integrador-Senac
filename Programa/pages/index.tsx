@@ -141,6 +141,15 @@ export default function Home({ games }: HomeProps) {
           </div>
         ))}
       </div>
+
+      <footer className={Style.footer}>
+  <p>&copy; {new Date().getFullYear()} Tales e Henrique. Todos os direitos reservados.</p>
+  <div className={Style.footerLinks}>
+    <a href="/about">Sobre Nós</a> | 
+    <a href="/contact">Contato</a> | 
+    <a href="/privacy">Política de Privacidade</a>
+  </div>
+</footer>
     </main>
   );
 }

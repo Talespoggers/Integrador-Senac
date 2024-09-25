@@ -137,3 +137,44 @@
     cursor: pointer;
     font-size: 1rem;
 }
+
+
+
+
+
+.main {
+    min-height: calc(100vh - 60px); /* Ajuste a altura mínima para levar em conta o rodapé */
+    padding-bottom: 60px; /* Adiciona um espaço no fundo da página igual à altura do rodapé */
+}
+
+/* Estiliza o rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #444;
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footerLinks {
+    margin-top: 10px;
+}
+
+.footerLinks a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footerLinks a:hover {
+    text-decoration: underline;
+}
