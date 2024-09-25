@@ -23,16 +23,22 @@ export default function Register() {
 
     async function formSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
+        
+        if (formData.password !== formData.cPassword) {
+            alert("As senhas não correspondem");
+            return;
+        }
+      
         try {
-            const response = await fetch(`/api/user/login`, {
+            const response = await fetch(`/api/user/register`, {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify(formData),
             });
-
+      
             const responseJson = await response.json();
             alert(`${responseJson.message}`);
-
+      
             if (response.status === 200) {
                 setCookie("authorization", responseJson.token);
                 router.push(`/user/login`);
@@ -40,7 +46,8 @@ export default function Register() {
         } catch (err) {
             console.log(err);
         }
-    }
+      }
+      
 
     return (
         

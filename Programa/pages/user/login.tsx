@@ -1,34 +1,35 @@
-import {useState} from "react";
+import { useState } from "react";
 import Link from "next/link";
-import  styles  from "@/styles/login.module.css";
-import { setCookie , getCookie } from "cookies-next";
+import styles from "@/styles/login.module.css";
+import { setCookie, getCookie } from "cookies-next";
 import { useRouter } from "next/router";
+import { register } from "module";
 
 
-export default function login(){
+export default function login() {
     const router = useRouter();
 
 
-    const [formData , setFormData] = useState({
+    const [formData, setFormData] = useState({
 
-        email :"",
+        email: "",
         password: ""
     });
 
-    function handleFormeEdit(event:any , field:string){
+    function handleFormeEdit(event: any, field: string) {
         setFormData({
             ...formData,
             [field]: event.target.value
         });
     }
 
-    async function formSubmit(event:any){
+    async function formSubmit(event: any) {
         event.preventDefault();
-        try{
-            const response = await fetch(`/api/user/login` , {
+        try {
+            const response = await fetch(`/api/user/login`, {
                 method: 'POST',
-                headers : {'Content-type' : 'application/json' },
-                body : JSON.stringify(formData)
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify(formData)
             });
 
             const responseJson = await response.json();
@@ -36,34 +37,48 @@ export default function login(){
             alert(` ${responseJson.message} `)
 
 
-            if( response.status== 200){
-                setCookie('authorization' , responseJson.token);
+            if (response.status == 200) {
+                setCookie('authorization', responseJson.token);
                 router.push(`/`);
             }
-            
+
         }
 
-        catch(err){
+        catch (err) {
             console.log(err)
 
         }
     }
 
-    return(
+    return (
         <main>
             <div className={styles.conteiner}>
                 <h1 className={styles.h1}>LOGIN</h1>
                 <form >
-                    <input className={styles.input} type="email" placeholder="Email"/>
+                    <input
+                        className={styles.input}
+                        type="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={(event) => handleFormeEdit(event, "email")}
+                    />
+                    <br />
+                    <br />
+                    <input
+                        className={styles.input}
+                        type="password"
+                        placeholder="Senha"
+                        value={formData.password}
+                        onChange={(event) => handleFormeEdit(event, "password")}
+                    />
                     <br />
                     <br />
 
-                    <input className={styles.input}  type="password" placeholder="Senha"/>
-                    <br />
+
+                    <button className={styles.input1} type="submit">Entrar</button>
                     <br />
 
-                    <button className={styles.input1}  type="submit">Entrar</button>
-                    <br />
+                    <Link href={`/user/register`}> Registrar-se</Link>
 
                 </form>
             </div>
